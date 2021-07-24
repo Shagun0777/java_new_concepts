@@ -1,0 +1,538 @@
+ static {
+       try{
+        flag=true;
+       
+        B=sc.nextInt();
+        H=sc.nextInt() ; 
+        if(B<0||H<0)
+        throw new java.lang.Exception("Breadth and height must be positive");  
+       }
+       catch(Exception e){
+           flag=false;
+           System.out.println(e);
+       }
+
+**************************************************************************
+
+
+import java.util.Scanner;
+import java.util.regex.*;
+
+public class Solution
+{
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		int testCases = Integer.parseInt(in.nextLine());
+		while(testCases>0){
+			String Pattern = in.nextLine();
+            String regex = String.next();
+            
+          	//Write your code
+              try {
+              public static Pattern compile(String regex) ;
+              }
+               catch (PatternSyntaxException exception) {
+            System.out.println("Invalid");
+		}
+         System.out.println("Valid");
+	}
+}
+
+******************************************************************************
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+
+
+// import java.math.BigInteger;  
+import java.util.*;  
+public class ScannerNextBigIntegerExample1 {    
+    public static void main(String args[]){    
+        //   System.out.print("Enter BigInteger Number to check prime: ");;  
+          Scanner in = new Scanner(System.in);  
+        BigInteger n = in.nextBigInteger();  
+        in.close();  
+        System.out.println(n.isProbablePrime(1) ? "prime" : "not prime");  
+      }    
+
+
+}  
+
+
+
+*************************************************************************
+ BigInteger add;
+         BigInteger mult;
+  
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc =Scanner(System.in) ;
+        BigInteger a = sc.nextBigInteger();
+        BigInteger b = sc.nextBigInteger();
+         add=a.add(b);
+         mult = a.multiply(b);
+         System.out.println(add);
+         System.out.println(mult);
+
+
+***************************************************************
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        // Write your code here.
+        s=s.replaceAll("!"," ");
+        s=s.replaceAll("\\."," ");
+        s=s.replaceAll("\\?"," ");
+        s=s.replaceAll(","," ");
+        s=s.replaceAll("_"," ");
+        s=s.replaceAll("\\'"," ");
+        s=s.replaceAll("@"," ");
+        s=s.replaceAll("  "," ");
+        String ss[]=s.split(" ");
+        ArrayList<String>  aa=new ArrayList<>();
+        
+        
+        for(String st:ss){
+         st=st.replaceAll(" ","");
+         if(st.length()>0)   
+        aa.add(st);
+        }
+        System.out.println(aa.size());
+        for(int i=0;i<aa.size();i++){
+            System.out.println(aa.get(i));
+        }
+        scan.close() ;
+    }
+}
+
+
+*****************************************************************
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+
+
+// import java.math.BigInteger;  
+import java.util.*;  
+public class ScannerNextBigIntegerExample1 {    
+    public static void main(String args[]){    
+        //   System.out.print("Enter BigInteger Number to check prime: ");;  
+          Scanner in = new Scanner(System.in);  
+        BigInteger n = in.nextBigInteger();  
+        in.close();  
+        System.out.println(n.isProbablePrime(1) ? "prime" : "not prime");  
+      }    
+}  
+
+
+
+*******************************************************************
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc =new Scanner(System.in);
+        int n =sc.nextInt();
+        
+        ArrayList<ArrayList<Integer>> aa = new ArrayList<ArrayList<Integer>>();
+        while(n-->0){
+           int d=sc.nextInt();
+            ArrayList<Integer> temp=new ArrayList<>();
+         for(int i=0 ; i<d ; i++) {
+               temp.add(sc.nextInt());
+             }
+             aa.add(temp);   
+        }
+        int q=sc.nextInt();
+        // System.out.println(aa);
+        while(q-->0){
+            int i=sc.nextInt()-1;
+            int j=sc.nextInt()-1;
+            if(i>=aa.size()||j>=aa.get(i).size()){
+             System.out.println("ERROR!");  
+            }
+            else
+            System.out.println(aa.get(i).get(j));
+        }  
+    }
+}
+
+
+
+
+*************************************************************
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'compareTriplets' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. INTEGER_ARRAY a
+     *  2. INTEGER_ARRAY b
+     */
+
+    public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+    // Write your code here
+    int a1=0,b1=0;
+    for (int i=0 ; i< 3;i++) {
+        if (a.get(i)>b.get(i)) {
+            a1++;
+        }
+        else if (a.get(i)<b.get(i))
+        b1++;
+    }
+    Integer[] aa={a1,b1};
+ return Arrays.asList(aa);
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+            .map(Integer::parseInt)
+            .collect(toList());
+
+        List<Integer> b = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+            .map(Integer::parseInt)
+            .collect(toList());
+
+        List<Integer> result = Result.compareTriplets(a, b);
+
+        bufferedWriter.write(
+            result.stream()
+                .map(Object::toString)
+                .collect(joining(" "))
+            + "\n"
+        );
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
+
+
+*********************************************************************************
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'timeConversion' function below.
+     *
+     * The function is expected to return a STRING.
+     * The function accepts STRING s as parameter.
+     */
+     public static String Timea(String snew) {
+         if (snew.substring(0,2).equals("12")) {
+             String sk="00";
+             String sfinala =snew.substring(2);
+             return (sk+sfinala);
+         }
+         return snew;
+     }
+      public static String Timep(String snew) {
+          if (snew.substring(0,2).equals("12")) {
+              return (snew);
+          }
+          else {
+              int l =Integer.parseInt(snew.substring(0,2));
+              l=l+12;
+              return (l+snew.substring(2)) ;
+          }
+         
+     }
+
+    public static String timeConversion(String s) {
+    // Write your code here
+   int  k=s.length();
+    String snew =s.substring(0,k-2);
+    String ampmn = s.substring(k-2,k); 
+   return ( s.charAt(k-2)=='A'?Timea(snew):Timep(snew) ) ;
+    
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String s = bufferedReader.readLine();
+
+        String result = Result.timeConversion(s);
+
+        bufferedWriter.write(result);
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
+
+******************************************************************
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'diagonalDifference' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+     */
+
+    public static int diagonalDifference(List<List<Integer>> arr) {
+    // Write your code here
+    int s1=0 ;
+    int s2 =0 ;
+    for (int i=0 ;i<arr.size(); i++) {
+        s1=s1+arr.get(i).get(i);
+        System.out.println(s1);
+    }
+    int j =arr.size()-1;
+    int ik= 0;
+    while (ik<arr.size()&&j>-1) {
+        s2=s2+arr.get(ik).get(j) ;
+        j--;
+        ik++;
+         System.out.println(s2);
+    }
+   int  diff= Math.abs(s1-s2);
+   return diff ;
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+        List<List<Integer>> arr = new ArrayList<>();
+
+        IntStream.range(0, n).forEach(i -> {
+            try {
+                arr.add(
+                    Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+                        .map(Integer::parseInt)
+                        .collect(toList())
+                );
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
+        int result = Result.diagonalDifference(arr);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
+
+
+
+*********************************************************************
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'compareTriplets' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. INTEGER_ARRAY a
+     *  2. INTEGER_ARRAY b
+     */
+
+    public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+    // Write your code here
+    int a1=0,b1=0;
+    for (int i=0 ; i< 3;i++) {
+        if (a.get(i)>b.get(i)) {
+            a1++;
+        }
+        else if (a.get(i)<b.get(i))
+        b1++;
+    }
+    ArrayList<Integer> aa = new ArrayList<Integer>() ;
+    aa.add(a1);
+    aa.add(b1);
+    return aa ;
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+            .map(Integer::parseInt)
+            .collect(toList());
+
+        List<Integer> b = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+            .map(Integer::parseInt)
+            .collect(toList());
+
+        List<Integer> result = Result.compareTriplets(a, b);
+
+        bufferedWriter.write(
+            result.stream()
+                .map(Object::toString)
+                .collect(joining(" "))
+            + "\n"
+        );
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
+
+
+******************************************************************************
+
+static boolean isAnagram(String a, String b) {
+        // Complete the function
+        int m=a.length();
+        int k=b.length();
+        a=a.toLowerCase();
+        b=b.toLowerCase();
+        // char c1[]=a.toCharArray();
+        // char c2[]=b.toCharArray();        
+        int az1[]=new int[26]; 
+        int az2[]=new int[26]; 
+        for(int i=0;i<m;i++) {
+            az1[(a.charAt(i))-'a']++;
+            
+        }
+        for(int i=0;i<k;i++) {
+                az2[(b.charAt(i))-'a']++;
+        }
+return (compare(az1,az2) ) ;
+            
+        
+    }
+static boolean compare(int a[],int b[]) {
+    for(int i=0 ;i<26; i++) {
+        if (a[i]!=b[i]) {
+            return false ;
+          
+        }
+    } return true ;
+}
+
+
+*********************************************************************************
+     #
+     ##
+    ###
+   ####
+  #####
+ ######
+     #
+    ##
+   ###
+  ####
+ #####
+######
+
+
+
+
+
+
+
+
+********************************************************************
+
+
+
